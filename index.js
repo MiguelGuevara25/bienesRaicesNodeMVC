@@ -12,9 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 try {
   await db.authenticate();
   db.sync();
-  console.log("Conexión a la base de datos correcta");
 } catch (error) {
-  console.log(error);
+  console.error(error);
 }
 
 //?Habilitar Pug
